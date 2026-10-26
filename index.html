@@ -1,158 +1,254 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bill Smart</title>
 
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f5f7fb;
-        color: #333;
-        text-align: center;
-    }
+    <title>Bill Smart - Smart Business Management</title>
+    <meta name="description" content="Bill Smart helps you manage invoices, products, customers, sales, payments, and business performance in one place.">
+    <meta name="theme-color" content="#2563eb">
 
-    header {
-        background: #2563eb;
-        color: white;
-        padding: 50px 20px;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    h1 {
-        margin: 0;
-        font-size: 42px;
-    }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
 
-    .subtitle {
-        margin-top: 15px;
-        font-size: 18px;
-    }
+        header {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 60px 20px;
+        }
 
-    .container {
-        max-width: 1000px;
-        margin: auto;
-        padding: 40px 20px;
-    }
+        h1 {
+            margin: 0;
+            font-size: clamp(32px, 5vw, 46px);
+            line-height: 1.2;
+        }
 
-    .features {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+        .subtitle {
+            max-width: 650px;
+            margin: 16px auto 0;
+            font-size: 18px;
+            color: #eff6ff;
+        }
 
-    .card {
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        width: 250px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
+        .container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 45px 20px;
+        }
 
-    .card h3 {
-        color: #2563eb;
-    }
+        .section-description {
+            color: #64748b;
+            margin: 8px auto 30px;
+        }
 
-    .buttons {
-        margin-top: 40px;
-    }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
 
-    .btn {
-        display: inline-block;
-        margin: 10px;
-        padding: 14px 24px;
-        background: #2563eb;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-    }
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 24px 20px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e8edf5;
+        }
 
-    footer {
-        margin-top: 50px;
-        padding: 20px;
-        background: #e5e7eb;
-    }
-</style>
+        .card h3 {
+            color: #2563eb;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
 
+        .card p {
+            margin-bottom: 0;
+            color: #64748b;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 42px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 19px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 9px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2563eb;
+            border: 1px solid #dbeafe;
+        }
+
+        .btn-secondary:hover {
+            background: #eff6ff;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 25px 20px;
+            background: #e9edf5;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 45px 18px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 32px 16px;
+            }
+
+            .buttons {
+                gap: 10px;
+            }
+
+            .btn {
+                padding: 11px 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Bill Smart</h1>
+    <header>
+        <h1>Bill Smart</h1>
+        <p class="subtitle">
+            Smart business management for invoicing, sales, customers, and business tracking.
+        </p>
+    </header>
 
+    <main class="container">
 
-<p class="subtitle">
-    Smart Business Management for Invoicing, Sales & Analytics
-</p>
+        <h2>Key Features</h2>
+        <p class="section-description">
+            Simple tools to help you organize and manage your business.
+        </p>
 
+        <div class="features">
 
-</header>
+            <div class="card">
+                <h3>Invoice Creation</h3>
+                <p>Create and manage professional invoices with ease.</p>
+            </div>
 
-<div class="container">
+            <div class="card">
+                <h3>Product Management</h3>
+                <p>Add, edit, and organize your products efficiently.</p>
+            </div>
 
+            <div class="card">
+                <h3>Customer Management</h3>
+                <p>Keep customer details organized for your business.</p>
+            </div>
 
-<h2>Key Features</h2>
+            <div class="card">
+                <h3>Sales Tracking</h3>
+                <p>Review sales and transaction history in one place.</p>
+            </div>
 
-<div class="features">
+            <div class="card">
+                <h3>Profit Analysis</h3>
+                <p>Review business performance and profit information.</p>
+            </div>
 
-    <div class="card">
-        <h3>Invoice Creation</h3>
-        <p>Create and manage professional invoices with ease.</p>
-    </div>
+            <div class="card">
+                <h3>Payment Management</h3>
+                <p>Track payments and keep up with pending dues.</p>
+            </div>
 
-    <div class="card">
-        <h3>Product Management</h3>
-        <p>Add, edit, and organize your products efficiently.</p>
-    </div>
+        </div>
 
-    <div class="card">
-        <h3>Contact Management</h3>
-        <p>Store and manage customer and supplier details.</p>
-    </div>
+        <h2 style="margin-top: 48px;">Important Links</h2>
+        <p class="section-description">
+            Find Bill Smart's policies and app information below.
+        </p>
 
-    <div class="card">
-        <h3>Sales Tracking</h3>
-        <p>Monitor sales performance and transaction history.</p>
-    </div>
+        <nav class="buttons" aria-label="Important links">
 
-    <div class="card">
-        <h3>Profit Analysis</h3>
-        <p>Gain insights into profits and business growth.</p>
-    </div>
+            <a class="btn" href="privacy.html">
+                Privacy Policy
+            </a>
 
-    <div class="card">
-        <h3>Payment Management</h3>
-        <p>Track payments and stay on top of your finances.</p>
-    </div>
+            <a class="btn" href="terms.html">
+                Terms &amp; Conditions
+            </a>
 
-</div>
+            <a class="btn" href="delete-account.html">
+                Delete Account
+            </a>
 
-<div class="buttons">
-    <a class="btn" href="privacy.html">Privacy Policy</a>
+            <a class="btn" href="data-deletion.html">
+                Data Deletion
+            </a>
 
-    <a class="btn" href="terms.html">Terms & Conditions</a>
+            <a class="btn btn-secondary"
+               href="https://learningbotsofficial.github.io/billsmart-privacy-policy/app-ads.txt"
+               target="_blank"
+               rel="noopener noreferrer">
+                app-ads.txt
+            </a>
 
-    <a class="btn" href="delete-account.html">Delete Account</a>
+        </nav>
 
-    <a class="btn" href="data-deletion.html">Data Deletion</a>
-</div>
+    </main>
 
-
-</div>
-
-<footer>
-    <p>© 2026 Bill Smart. All rights reserved.</p>
-
-
-<p>Contact: billsmartapp@gmail.com</p>
-
-
-</footer>
+    <footer>
+        <p>&copy; 2026 Bill Smart. All rights reserved.</p>
+        <p>
+            Contact:
+            <a href="mailto:billsmartapp@gmail.com">billsmartapp@gmail.com</a>
+        </p>
+    </footer>
 
 </body>
 </html>
