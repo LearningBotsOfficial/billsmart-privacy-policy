@@ -29,7 +29,8 @@ a{color:inherit}
 /* hero */
 header{background:var(--hero);color:var(--hero-ink);padding:56px 0 64px}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.brand{font-weight:800;font-size:18px;margin:0 0 28px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;margin:0 0 28px}
+.brand img{width:40px;height:40px;border-radius:10px;display:block}
 h1{margin:0;font-size:clamp(32px,5vw,50px);line-height:1.12;font-weight:800;letter-spacing:-.02em}
 .lead{margin:18px 0 0;font-size:18px;color:var(--hero-muted);max-width:520px}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
@@ -39,22 +40,14 @@ h1{margin:0;font-size:clamp(32px,5vw,50px);line-height:1.12;font-weight:800;lett
 .btn.ghost:hover{background:rgba(255,255,255,.1)}
 .note{margin:14px 0 0;font-size:14px;color:var(--hero-muted)}
 
-/* ledger mock in hero */
-.mock{background:var(--surface);color:var(--ink);border-radius:18px;padding:16px;box-shadow:0 18px 40px rgba(0,0,0,.28);max-width:380px;margin-left:auto;width:100%}
-.mock-top{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:10px}
-.totals{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
-.tot{border-radius:12px;padding:10px;text-align:center}
-.tot small{display:block;font-size:12px;font-weight:600}
-.tot b{font-size:20px}
-.tot.get{background:var(--red-soft);color:var(--red)}
-.tot.give{background:var(--brand-soft);color:var(--brand-dark)}
-.row{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
-.av{width:34px;height:34px;border-radius:50%;background:var(--bg);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);flex:none}
-.row .nm{flex:1;min-width:0;font-size:14px;font-weight:600}
-.row .nm small{display:block;font-weight:400;color:var(--muted);font-size:12px}
-.amt{text-align:right;font-weight:700;font-size:14px}
-.amt.r{color:var(--red)} .amt.g{color:var(--brand)}
-.amt small{display:block;font-size:11px;font-weight:700;color:var(--brand)}
+/* app screenshots */
+.shot{background:#eaf6ee;border-radius:28px;padding:14px 14px 0;max-width:340px;margin-left:auto;width:100%;box-shadow:0 18px 40px rgba(0,0,0,.28);overflow:hidden}
+.shot img{display:block;width:100%;height:auto}
+.screens{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.screens figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.screens img{display:block;width:100%;height:auto;background:#eaf6ee}
+.screens figcaption{padding:12px 16px 14px;font-size:14.5px;color:var(--muted)}
+.screens figcaption b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
 
 /* sections */
 section{padding:56px 0 0}
@@ -67,17 +60,6 @@ h2{margin:0;font-size:clamp(24px,3.4vw,32px);line-height:1.2;letter-spacing:-.01
 .card ul{margin:12px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px}
 .card li{margin:4px 0}
 .card.key{border-color:var(--brand);background:linear-gradient(var(--brand-soft),var(--surface) 70%)}
-
-/* ledger spotlight */
-.spot{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px}
-.spot h3{margin:0 0 10px;font-size:22px}
-.spot p{margin:0 0 14px;color:var(--muted)}
-.steps{margin:0;padding:0;list-style:none;counter-reset:s}
-.steps li{counter-increment:s;display:flex;gap:12px;margin:0 0 14px;color:var(--muted)}
-.steps li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
-.steps b{color:var(--ink)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.chip{background:var(--brand-soft);color:var(--brand-dark);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600}
 
 /* free plan */
 .plan{background:var(--gold-soft);border:1px solid var(--gold);border-radius:16px;padding:22px 24px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
@@ -114,28 +96,19 @@ footer a:hover{text-decoration:underline}
 
 <header>
   <div class="wrap">
-    <p class="brand">Bill Smart</p>
+    <p class="brand"><img src="images/logo.png" alt="" width="40" height="40">Bill Smart</p>
     <div class="hero">
       <div>
         <h1>Billing, stock and credit ledger for your shop</h1>
         <p class="lead">Make invoices in seconds, know what is in stock, and never forget who owes you money. Built for shopkeepers and distributors who sell on route.</p>
         <div class="cta">
           <a class="btn" href="#features">See what you can do</a>
-          <a class="btn ghost" href="#ledger">How the ledger works</a>
+          <a class="btn ghost" href="#screens">See the app</a>
         </div>
-        <p class="note">Free plan available. Your data is never deleted or locked.</p>
+        <p class="note">Made for Indian businesses. Free plan available. Your data is never deleted or locked.</p>
       </div>
 
-      <div class="mock" aria-label="Example of the Bill Smart ledger screen">
-        <div class="mock-top"><b>Ledger</b><span>Example</span></div>
-        <div class="totals">
-          <div class="tot get"><small>You will get</small><b>₹12,450</b></div>
-          <div class="tot give"><small>You will give</small><b>₹800</b></div>
-        </div>
-        <div class="row"><div class="av">RS</div><div class="nm">Ramesh Store<small>2 days ago</small></div><div class="amt r">₹6,200<small>REMIND</small></div></div>
-        <div class="row"><div class="av">SK</div><div class="nm">Sunita Kirana<small>Today</small></div><div class="amt r">₹6,250<small>REMIND</small></div></div>
-        <div class="row"><div class="av">AT</div><div class="nm">Aman Traders<small>1 week ago</small></div><div class="amt g">₹800</div></div>
-      </div>
+      <div class="shot"><img src="images/phone.png" width="370" height="710" alt="Bill Smart invoice history screen with View, Save PDF and Share buttons"></div>
     </div>
   </div>
 </header>
@@ -149,10 +122,11 @@ footer a:hover{text-decoration:underline}
     <div class="grid">
       <div class="card">
         <h3>Invoices and orders</h3>
-        <p>Pick a customer, add products and create a professional invoice. Find old invoices any time.</p>
+        <p>Pick a customer, add products and create a professional invoice in a few taps.</p>
         <ul>
-          <li>Invoice number and full order history</li>
-          <li>Print invoices with a connected printer</li>
+          <li>Search invoices by number or customer</li>
+          <li>Save as PDF or share on WhatsApp</li>
+          <li>Print with a connected printer</li>
           <li>Your business name and UPI ID on every bill</li>
         </ul>
       </div>
@@ -181,9 +155,21 @@ footer a:hover{text-decoration:underline}
         <h3>Customers, routes and villages</h3>
         <p>Keep names, phone numbers and areas together, and group customers by delivery route and village.</p>
         <ul>
+          <li>Search by name, phone or area</li>
           <li>Filter customers by route</li>
           <li>See orders, total sales and last order for each customer</li>
           <li>Call a customer with one tap</li>
+        </ul>
+      </div>
+
+      <div class="card key">
+        <h3>Customer ledger</h3>
+        <p>Track credit without a notebook. See what customers owe you and what they paid.</p>
+        <ul>
+          <li>Tap You gave or You got, and the balance updates</li>
+          <li>Running balance after every entry</li>
+          <li>Remind on WhatsApp or SMS with the amount and your UPI ID</li>
+          <li>Filter by You will get, You will give or Settled</li>
         </ul>
       </div>
 
@@ -194,40 +180,33 @@ footer a:hover{text-decoration:underline}
 
       <div class="card">
         <h3>Dashboard and reports</h3>
-        <p>Check today's sales and profit on the dashboard, then open reports to see how the business is growing.</p>
+        <p>Check sales and profit on the dashboard, then open reports for the full picture.</p>
+        <ul>
+          <li>Overview, daily, monthly and product views</li>
+          <li>Total revenue, profit, orders and average order</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Business settings</h3>
+        <p>Set up your shop once and it appears on your bills.</p>
+        <ul>
+          <li>Business name, type and owner name</li>
+          <li>Phone number and optional GSTIN</li>
+          <li>Choose your app language</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="ledger">
-    <div class="spot">
-      <div>
-        <h3>Ledger: track credit without a notebook</h3>
-        <p>Many customers buy on credit. The ledger keeps a clear running balance for each of them, so nothing gets lost.</p>
-        <ul class="steps">
-          <li><span><b>Add a customer</b> by name and mobile number, or pick someone you already have.</span></li>
-          <li><span><b>Tap You gave</b> when you give goods or money on credit. The balance goes up.</span></li>
-          <li><span><b>Tap You got</b> when they pay. The balance goes down.</span></li>
-          <li><span><b>Tap Remind</b> to open WhatsApp or SMS with a ready message that includes the amount and your UPI ID. You press send.</span></li>
-        </ul>
-      </div>
-      <div>
-        <div class="card key">
-          <h3>What you get</h3>
-          <ul>
-            <li>Total you will get and total you will give, always on top</li>
-            <li>Running balance after every entry</li>
-            <li>Edit an entry, change its date or add a note</li>
-            <li>Settled customers are marked clearly</li>
-          </ul>
-        </div>
-        <div class="chips" aria-label="Ledger filters and sorting">
-          <span class="chip">Filter: You will get</span>
-          <span class="chip">Filter: You will give</span>
-          <span class="chip">Filter: Settled</span>
-          <span class="chip">Sort by amount, name or date</span>
-        </div>
-      </div>
+  <section id="screens">
+    <h2>See the app</h2>
+    <p class="sub">A look at some of the screens you will use every day.</p>
+    <div class="screens">
+      <figure><img src="images/customers.png" width="342" height="379" loading="lazy" alt="Customers screen with search and customer cards"><figcaption><b>Customers</b>Search, add and manage your customers.</figcaption></figure>
+      <figure><img src="images/ledger.png" width="337" height="274" loading="lazy" alt="Ledger screen showing You will get and You will give totals"><figcaption><b>Ledger</b>Totals and balances at a glance.</figcaption></figure>
+      <figure><img src="images/reports.png" width="342" height="287" loading="lazy" alt="Reports screen with revenue, profit, orders and average order"><figcaption><b>Reports</b>Revenue, profit and orders.</figcaption></figure>
+      <figure><img src="images/settings.png" width="339" height="381" loading="lazy" alt="Settings screen with business information and language"><figcaption><b>Settings</b>Your business details and language.</figcaption></figure>
     </div>
   </section>
 
@@ -244,7 +223,7 @@ footer a:hover{text-decoration:underline}
 
   <section>
     <div class="plan">
-      <p><b>Start free.</b> The free plan has limits on products, customers and ledger customers. A friendly card shows how much you have used. Nothing is ever locked or deleted, and you can upgrade for unlimited use, reports and a premium invoice.</p>
+      <p><b>Start free.</b> The free plan has limits on products, customers (50) and ledger customers (20). A friendly card shows how much you have used. Nothing is ever locked or deleted, and you can upgrade for unlimited use, reports and a premium invoice.</p>
     </div>
   </section>
 
