@@ -1,173 +1,80 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BillSmart – Delete Data</title>  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f5f7fa;
-      color: #1a1a2e;
-      line-height: 1.7;
-      padding: 2rem 1rem;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 2.5rem 2rem;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid #e8ecf0;
-    }
-
-    .logo {
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #1565C0, #1976D2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 700;
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-
-    .header-text h1 {
-      font-size: 22px;
-      font-weight: 700;
-      color: #1a1a2e;
-    }
-
-    .header-text p {
-      font-size: 13px;
-      color: #6b7280;
-      margin-top: 2px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #e3f2fd;
-      color: #1565C0;
-      font-size: 12px;
-      font-weight: 500;
-      padding: 3px 10px;
-      border-radius: 20px;
-      margin-top: 6px;
-    }
-
-    h2 {
-      font-size: 16px;
-      font-weight: 600;
-      color: #1a1a2e;
-      margin: 2rem 0 0.75rem;
-      padding-left: 12px;
-      border-left: 3px solid #1976D2;
-    }
-
-    p {
-      font-size: 14px;
-      color: #374151;
-      margin-bottom: 0.75rem;
-    }
-
-    ul {
-      padding-left: 1.25rem;
-      margin-bottom: 0.75rem;
-    }
-
-    ul li {
-      font-size: 14px;
-      color: #374151;
-      margin-bottom: 0.4rem;
-    }
-
-    .contact-box {
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
-      margin-top: 2rem;
-    }
-
-    .contact-box p {
-      color: #166534;
-      margin: 0;
-      font-size: 14px;
-    }
-
-    .contact-box a {
-      color: #15803d;
-      font-weight: 500;
-    }
-
-    .footer {
-      text-align: center;
-      font-size: 12px;
-      color: #9ca3af;
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #e8ecf0;
-    }
-  </style></head>
-<body>  <div class="container"><div class="header">
-  <div class="logo">BS</div>
-
-  <div class="header-text">
-    <h1>BillSmart</h1>
-    <p>Distributor Billing & Management</p>
-    <span class="badge">Delete Data</span>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bill Smart – Delete Data</title>
+<meta name="theme-color" content="#14532d">
+<style>
+:root{--bg:#f6f8f5;--surface:#fff;--ink:#10261c;--muted:#506258;--line:#dbe5de;--brand:#15803d;--brand-dark:#14532d;--brand-soft:#e3f4e8;--gold:#b7791f;--gold-soft:#fbf1da;--hero:#0f3d25;--hero-ink:#f2fbf5;--hero-muted:#b6d9c3}
+@media (prefers-color-scheme:dark){:root{--bg:#0c1511;--surface:#14211b;--ink:#e8f3ec;--muted:#9db3a6;--line:#25382e;--brand:#4ade80;--brand-dark:#86efac;--brand-soft:#173826;--gold:#f0b94d;--gold-soft:#3a2e12;--hero:#0a2217;--hero-ink:#f2fbf5;--hero-muted:#a9cdb7}}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+a{color:var(--brand)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{background:var(--hero);color:var(--hero-ink);padding:22px 0 56px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px;font-size:15px}
+.top a{color:var(--hero-ink);text-decoration:none;font-weight:700}
+.top a:hover{text-decoration:underline}
+h1{margin:0;font-size:clamp(28px,5vw,38px);line-height:1.2;letter-spacing:-.01em}
+.tag{margin:10px 0 0;color:var(--hero-muted);font-size:16px}
+main{margin-top:-28px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px 26px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+h2{margin:30px 0 8px;font-size:18px;line-height:1.3}
+h2:first-child{margin-top:0}
+p{margin:0 0 12px;color:var(--muted);font-size:15.5px}
+ul{margin:0 0 12px;padding-left:20px;color:var(--muted);font-size:15.5px}
+li{margin:5px 0}
+strong{color:var(--ink)}
+.meta{background:var(--brand-soft);border-radius:10px;padding:12px 16px;margin:0 0 22px;font-size:14px;color:var(--brand-dark)}
+.meta p{margin:0;color:inherit;font-size:14px}
+.contact{background:var(--gold-soft);border:1px solid var(--gold);border-radius:12px;padding:16px 18px;margin:24px 0 0}
+.contact p{margin:0;color:var(--ink);font-size:15px}
+.contact a{font-weight:700}
+.steps{list-style:none;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:12px;margin:0 0 12px}
+.steps li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin:26px 0 0;font-size:14px}
+.links a{text-decoration:none;font-weight:600}
+.links a:hover{text-decoration:underline}
+.links a[aria-current=page]{color:var(--muted);pointer-events:none}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:22px 0 36px}
+@media (max-width:480px){.card{padding:22px 18px}header{padding-bottom:50px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top"><a href="index.html">&larr; Bill Smart</a></div>
+    <h1>Delete Data</h1>
+    <p class="tag">Remove specific data without deleting your account.</p>
   </div>
-</div>
+</header>
+<main class="wrap">
+  <div class="card">
+<p>BillSmart gives users control over their data and allows them to delete specific data without deleting their account.</p>
 
-<p>
-  BillSmart gives users control over their data and allows them to delete specific data without deleting their account.
-</p>
-
-<h2>Delete Data Within the App</h2>
+<h2>Delete data within the app</h2>
 <ul>
   <li>Delete products that you have added.</li>
   <li>Delete customer details.</li>
   <li>Delete invoices and invoice history.</li>
 </ul>
 
-<h2>Request Additional Data Deletion</h2>
-<p>
-  If you need assistance deleting your data, please contact us using the email below.
-</p>
+<h2>Request additional data deletion</h2>
+<p>If you need assistance deleting your data, please contact us using the email below.</p>
 
-<div class="contact-box">
-  <p>
-    📧 <strong>Email:</strong><br>
-    <a href="mailto:billsmartapp@gmail.com">billsmartapp@gmail.com</a>
-  </p>
+<div class="contact"><p><strong>Email</strong><br><a href="mailto:billsmartapp@gmail.com">billsmartapp@gmail.com</a></p></div>
+
+<h2>Data retention</h2>
+<p>Some invoice and billing data may be retained for a limited period depending on your subscription plan and app settings. Certain data may also be automatically removed according to the retention period applicable to your account.</p>
+
+<h2>Account deletion</h2>
+<p>Deleting products, customers, or invoices does not require deleting your BillSmart account. To delete the whole account, see <a href="delete-account.html">Delete Account</a>.</p>
 </div>
-
-<h2>Data Retention</h2>
-<p>
-  Some invoice and billing data may be retained for a limited period depending on your subscription plan and app settings. Certain data may also be automatically removed according to the retention period applicable to your account.
-</p>
-
-<h2>Account Deletion</h2>
-<p>
-  Deleting products, customers, or invoices does not require deleting your BillSmart account.
-</p>
-
-<div class="footer">
-  &copy; 2026 BillSmart. All rights reserved.
-</div>
-
-  </div></body>
+  <nav class="links" aria-label="Other pages"><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="delete-account.html">Delete Account</a><a href="data-deletion.html" aria-current="page">Data Deletion</a></nav>
+</main>
+<footer>&copy; 2026 Bill Smart. All rights reserved.</footer>
+</body>
 </html>
